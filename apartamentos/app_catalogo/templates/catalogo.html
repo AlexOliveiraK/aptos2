@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block navegacao %}
+<span class="navbar-brand mb-0 h1"><a style="text-decoration: none; color: black;" href="{% url 'novo_apto' %}">Cadastro novo</a></span>
+{% endblock%}
+
+{% block conteudo %}
+
+<div class="container">
+    <h1>Apartamentos Cadastrados</h1>
+    <table class="table table-bordered table-striped">
+        <tr>
+            <th>id</th>
+            <th>Numero</th>
+            <th>Morador</th>
+        </tr>
+        {% for apartamento in aptos %}
+        <tr>
+            <td>{{apartamento.id_apto}}</td>
+            <td>{{apartamento.numero_apto}}</td>
+            <td>{{apartamento.morador}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+
+{% endblock %}

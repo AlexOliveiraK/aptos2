@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block navegacao %}
+<span class="navbar-brand mb-0 h1"><a style="text-decoration: none; color: black;" href="{% url 'catalogo_aptos' %}">Catalogo</a></span>
+{% endblock%}
+
+{% block conteudo %}
+
+<form action="{% url 'catalogo_aptos' %}" method="post">
+    {% csrf_token %}
+    <div style="text-align: center;" class="container">
+        <h1>Cadastro apto</h1>
+        Numero <input name="numero_apto" class="form-control-sm" type="number">
+        Nome do Morador <input name="morador" class="form-control-sm" type="text">
+        <button class="form-control-sm">Enviar</button>
+    </div>
+</form>
+
+{% endblock %}
