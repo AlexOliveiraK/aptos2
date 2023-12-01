@@ -14,6 +14,6 @@ def catalogo(request):
     }
 
     return render(request, 'catalogo.html', aptos)
-        
+
 def novoapto(request):
     return render(request, 'novoapto.html')

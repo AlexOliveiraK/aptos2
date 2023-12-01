@@ -1,8 +1,14 @@
 {% extends 'usuarios/base.html' %}
 
 {% block navegacao %}
-    <span class="navbar-brand mb-0 h1"><a style="text-decoration: none; color: black;" href="{% url 'add_usuarios'%}">Novo Usuario</a></span>
-    <span class="navbar-brand mb-0 h1"><a style="text-decoration: none; color: black;" href="{% url 'catalogo_aptos'%}">Catalogo aptos</a></span>
+    <li>
+        <i class='bx bx-user-circle'></i>
+        <span class="item_menu"><a style="text-decoration: none; color: black;" href="{% url 'listagem_usuarios'%}">Usuarios</a></span>
+    </li>
+    <li>
+        <i class='bx bx-building-house'></i>
+        <span class="item_menu"><a style="text-decoration: none; color: black;" href="{% url 'catalogo_aptos'%}">Catalogo aptos</a></span>
+    </li>
 {% endblock%}
 
 {% block conteudo %}
