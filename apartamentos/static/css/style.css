@@ -6,13 +6,52 @@
 }
 
 body{
-    height: 100vh;
+    background-color: black;
 }
 
 .geral{
     background-color: aqua;
-    margin-left: 150px;
+    display: flex;
+    height: 1200px;
 }
+
+.conteudo{
+    padding: 20px;
+    display: flex;
+}
+
+.container-aptos-cadastrados{
+    background-color: rgb(217, 255, 0);
+    width: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container-novo-apto{
+    background-color: rgb(200, 0, 255);
+    width: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container-usuarios-cadastrados{
+    background-color: rgb(200, 0, 255);
+    width: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container-novo-usuario{
+    background-color: rgb(200, 0, 255);
+    width: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 
 nav.menu-lateral{
     width: 80px;
@@ -21,7 +60,6 @@ nav.menu-lateral{
     padding: 40px 0 40px 1%;
     box-shadow: 3px 0 0 #ff0077;
 
-    position: fixed;
     top: 0;
     left: 0;
     overflow: hidden;

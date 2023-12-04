@@ -6,13 +6,36 @@
 }
 
 body{
-    height: 100vh;
+    background-color: black;
 }
 
 .geral{
     background-color: aqua;
-    margin-left: 150px;
+    display: flex;
+    height: 900px;
 }
+
+.conteudo{
+    padding: 20px;
+    display: flex;
+}
+
+.container{
+    background-color: rgb(200, 0, 255);
+    width: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container-novo-apto{
+    background-color: rgb(21, 18, 22);
+    width: 1000px;
+    display: flex;
+}
+
+
+
 
 nav.menu-lateral{
     width: 80px;
@@ -21,7 +44,6 @@ nav.menu-lateral{
     padding: 40px 0 40px 1%;
     box-shadow: 3px 0 0 #ff0077;
 
-    position: fixed;
     top: 0;
     left: 0;
     overflow: hidden;

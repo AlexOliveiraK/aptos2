@@ -1,27 +1,16 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block navegacao %}
-    <li>
-        <i class='bx bx-user-circle'></i>
-        <span class="item_menu"><a style="text-decoration: none; color: black;" href="{% url 'listagem_usuarios'%}">Usuarios</a></span>
-    </li>
-    <li>
-        <i class='bx bx-building-house'></i>
-        <span class="item_menu"><a style="text-decoration: none; color: black;" href="{% url 'catalogo_aptos'%}">Catalogo</a></span>
-    </li>
-{% endblock%}
-
-{% block conteudo %}
-
-<form action="{% url 'catalogo_aptos' %}" method="post">
-    {% csrf_token %}
-    <div style="text-align: center;" class="container">
-        <h1>Cadastro apto</h1>
-        Numero <input name="numero_apto" class="form-control-sm" type="number">
-        Nome do Morador <input name="morador" class="form-control-sm" type="text">
-        <button class="form-control-sm">Enviar</button>
+{% block main %}
+    <div class="container-novo-apto">
+        <form action="{% url 'catalogo_aptos' %}" method="post">
+            {% csrf_token %}
+            <h2>Cadastro apto2</h2>
+            <label>Numero</label>
+            <input name="numero_apto" class="form-control-sm" type="number"></br>
+            <label>Nome do inquilino</label>
+            <input name="morador" class="form-control-sm" type="text">
+            <button class="form-control-sm">Enviar</button>
+        </form>
     </div>
-</form>
-
 {% endblock %}

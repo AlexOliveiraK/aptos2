@@ -1,31 +1,20 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block navegacao %}
-    <li>
-        <i class='bx bx-user-circle'></i>
-        <span class="item_menu"><a style="text-decoration: none; color: black;" href="{% url 'listagem_usuarios'%}">Usuarios</a></span>
-    </li>
-    <li>
-        <i class='bx bx-home'></i>
-        <span class="item_menu"><a style="text-decoration: none; color: black;" href="{% url 'novo_apto'%}">Novo apto</a></span>
-    </li>
-{% endblock%}
+{% block main %}
 
-{% block conteudo %}
-
-<div class="container">
-    <h1>Apartamentos Cadastrados</h1>
-    <div class="apartamentos">
-        <div class="item">apto1</div>
-        <div class="item">apto2</div>
-        <div class="item">apto3</div>
-        <div class="item">apto4</div>
-        <div class="item">apto5</div>
-        <div class="item">apto6</div>
-        <div class="item">apto7</div>
-        <div class="item">apto8</div>
+    <div class="container-aptos-cadastrados">
+        <h1>Apartamentos Cadastrados</h1>
+        <div class="apartamentos">
+            <div class="item">apto1apto1apto1apto1apto1apto1apto1apto1apto1apto1apto1apto1apto1apto1apto1apto1apto1apto1apto1apto1</div>
+            <div class="item">apto2</div>
+            <div class="item">apto3</div>
+            <div class="item">apto4</div>
+            <div class="item">apto5</div>
+            <div class="item">apto6</div>
+            <div class="item">apto7</div>
+            <div class="item">apto8</div>
+        </div>
     </div>
-</div>
 
 {% endblock %}
