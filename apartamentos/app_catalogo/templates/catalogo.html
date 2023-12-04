@@ -4,17 +4,21 @@
 {% block main %}
 
     <div class="container-aptos-cadastrados">
-        <h1>Apartamentos Cadastrados</h1>
-        <div class="apartamentos">
-            <div class="item">apto1apto1apto1apto1apto1apto1apto1apto1apto1apto1apto1apto1apto1apto1apto1apto1apto1apto1apto1apto1</div>
-            <div class="item">apto2</div>
-            <div class="item">apto3</div>
-            <div class="item">apto4</div>
-            <div class="item">apto5</div>
-            <div class="item">apto6</div>
-            <div class="item">apto7</div>
-            <div class="item">apto8</div>
-        </div>
+        <h1>Apartamentos</h1>
+        <table class="table table-bordered table-striped">
+            <tr>
+                <th>Código</th>
+                <th>Número do apartamento</th>
+                <th>Nome do inquilino</th>
+            </tr>
+            {% for apto in aptos %}
+            <tr>
+                <td>{{apto.id_apto}}</td>
+                <td>{{apto.numero_apto}}</td>
+                <td>{{apto.morador}}</td>
+            </tr>
+            {% endfor %}
+        </table>
     </div>
 
 {% endblock %}

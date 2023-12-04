@@ -12,7 +12,7 @@ body{
 .geral{
     background-color: aqua;
     display: flex;
-    height: 900px;
+    height: 1200px;
 }
 
 .conteudo{
@@ -20,7 +20,16 @@ body{
     display: flex;
 }
 
-.container{
+.container-aptos-cadastrados{
+    background-color: rgb(217, 255, 0);
+    width: 900px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-novo-apto{
     background-color: rgb(200, 0, 255);
     width: 1000px;
     display: flex;
@@ -28,13 +37,21 @@ body{
     align-items: center;
 }
 
-.container-novo-apto{
-    background-color: rgb(21, 18, 22);
+.container-usuarios-cadastrados{
+    background-color: rgb(200, 0, 255);
     width: 1000px;
     display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-
+.container-novo-usuario{
+    background-color: rgb(200, 0, 255);
+    width: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 
 nav.menu-lateral{
