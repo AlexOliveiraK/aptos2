@@ -3,7 +3,7 @@
 
 {% block main %}
     <div class="container-novo-apto">
-        <form action="{% url 'catalogo_aptos' %}" method="post">
+        <form action="{% url 'salvar_Apto' %}" method="post">
             {% csrf_token %}
             <h2>Cadastro apto2</h2>
             <label>Numero</label>

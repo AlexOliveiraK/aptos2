@@ -7,14 +7,12 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('', views_catalogo.catalogo, name='catalogo_aptos'),
+    path('novoapto/', views_catalogo.novoapto, name='novo_apto'),
+    path('salvar-apto/', views_catalogo.salvarApto, name='salvar_Apto'),
     path('usuarios/', views_usuarios.usuarios, name='listagem_usuarios'),
     path('add_usuario/', views_usuarios.add_usuario, name='add_usuarios'),
-    path('novoapto/', views_catalogo.novoapto, name='novo_apto'),
-    ]
-    # path('', views.home, name='home'),
-    # path('usuarios/', views.usuarios, name='listagem_usuarios'),
-    # path('catalogo/', views_catalogo.catalogo, name='catalogo_aptos'),
-    # path('novoapto/', views_catalogo.novoapto, name='novo_apto'),
+    path('salvar_usuario/', views_usuarios.salvarUsuario, name='salvar_usuario'),
+]
 
 #+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 #+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
