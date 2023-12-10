@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from .models import Usuario
 
-def add_usuario(request):
+def addUsuario(request):
     return render(request, 'usuarios/add_usuarios.html')
 
 def usuarios(request):
@@ -17,4 +17,4 @@ def salvarUsuario(request):
     novo_usuario.idade = request.POST.get('idade')
     novo_usuario.save()
 
-    return redirect('listagem_usuarios')
+    return redirect('listagem-usuarios')

@@ -6,3 +6,7 @@ let menuSide = document.querySelector('.menu-lateral')
 btnExp.addEventListener('click', function(){
     menuSide.classList.toggle('expandir')
 })
+
+function edita_apto(id){
+    
+}

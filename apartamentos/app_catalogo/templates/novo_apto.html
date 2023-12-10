@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block main %}
+    <main class="conteudo">
+        <div class="container-novo-apto">
+            <form action="{% url 'salvar-apto' %}" method="post">
+                {% csrf_token %}
+                <h2>Cadastro apto</h2>
+                <label>Numero</label>
+                <input name="numero_apto" class="form-control-sm" type="number"></br>
+                <label>Nome do inquilino</label>
+                <input name="morador" class="form-control-sm" type="text">
+                <button class="form-control-sm">Enviar</button>
+            </form>
+        </div>
+    </main>
+{% endblock %}

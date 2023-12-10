@@ -3,22 +3,26 @@
 
 {% block main %}
 
-    <div class="container-aptos-cadastrados">
-        <h1>Apartamentos</h1>
-        <table class="table table-bordered table-striped">
-            <tr>
-                <th>Código</th>
-                <th>Número do apartamento</th>
-                <th>Nome do inquilino</th>
-            </tr>
+    <main class="conteudo">
+        <div class="header">
+            <span class="header">Apartamentos</span>
+        </div>
+        <div class="quadro-aptos">
             {% for apto in aptos %}
-            <tr>
-                <td>{{apto.id_apto}}</td>
-                <td>{{apto.numero_apto}}</td>
-                <td>{{apto.morador}}</td>
-            </tr>
+                <form class="controles" action="{% url 'edita-apto' %}" method="POST">
+                    {% csrf_token %}
+                    <div class="resumo-apto">
+                        <p class="numero-numero">Nº: {{apto.numero_apto}}</p>
+                        <p class="apto-morador">Inquilino: {{apto.morador}}</p>
+                    </div>
+                    
+                    <div class="apto">
+                        <button class="apagar" onclick="">Deletar</button>
+                        <button class="abrir-apto">Abrir</button>
+                    </div>
+                </form>
             {% endfor %}
-        </table>
-    </div>
+        </div>
+    </main>
 
 {% endblock %}
