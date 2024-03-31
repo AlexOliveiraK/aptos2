@@ -15,6 +15,11 @@
         {{form.password2}}
     </p>
     
+    {% for message in messages %}
+        <p id="messages">{{message}}</p>
+    {% endfor %}
+    
+
     <div class="new-user">
         Ainda não tem uma conta?<a href="{% url 'user-register' %}" >Registrar</a>
     </div>

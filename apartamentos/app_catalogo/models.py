@@ -4,4 +4,8 @@ from django.db import models
 class Apartamentos(models.Model):
     id_apto = models.AutoField(primary_key=True)
     numero_apto = models.IntegerField()
-    morador = models.TextField(max_length=255)
+    morador = models.CharField(max_length=255)
+    aluguel = models.CharField(max_length=255)
+
+    def __str__(self) -> str:
+        return self.id_apto
