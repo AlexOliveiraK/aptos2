@@ -13,15 +13,25 @@ def catalogo(request):
 def novoApto(request):
     return render(request, 'novo_apto.html')
 
-def salvarApto(request):
+def salvaNovoApto(request):
     novo_apto = Apartamentos()
     novo_apto.numero_apto= request.POST.get('numero_apto')
     novo_apto.morador = request.POST.get('morador')
+    novo_apto.aluguel = request.POST.get('aluguel')
     novo_apto.save()
 
     return redirect('catalogo-aptos')
 
-def editaApto(request):
+def updateApto(request):
+    novo_apto = Apartamentos.objects.filter(id_apto= request.POST.get('id_apto'))
+    novo_apto.numero_apto= request.POST.get('numero_apto')
+    novo_apto.morador = request.POST.get('morador')
+    novo_apto.aluguel = request.POST.get('aluguel')
+    novo_apto.save()
+
+    return redirect('catalogo-aptos')
+
+def editaApto2(request):
     if request.method == "POST":
         print("VEIO PELO POST >>>>>>>>>>>>>>>>>>")
         id_apto = request.POST.get('id_apto')
@@ -45,18 +55,27 @@ def editaApto(request):
 
     return redirect('catalogo-aptos')
 
-def abreApto(request):
-    
-    if request.method == 'POST':
-        
+def editaApto(request):
+
+    if request.method == 'GET':
+        id_apto = request.GET.get(id_apto)
+        apto = Apartamentos.objects.filter(id_apto = id_apto).first()
+        form = ApartamentosForm(instance=apto)
+
+        context = {
+            'apto': apto,
+            'form': form
+        }
+
+        return render(requast, 'edita_apto.html', context)
+
+    elif request.method == 'POST':
         id_apto = request.POST.get('id_apto')
         apto = Apartamentos.objects.filter(id_apto = id_apto)
 
         if apto.count() == 1:
-                
             context = {
                 "aptos": apto.first()
             }
 
-            return render(request, 'abre_apto.html', context)
-
+            return render(request, 'edita_apto.html', context)

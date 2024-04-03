@@ -46,7 +46,6 @@ body{
     padding: 5px;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
     border-radius: 5px;
 }
 

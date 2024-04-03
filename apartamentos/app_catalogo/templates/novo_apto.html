@@ -4,13 +4,15 @@
 {% block main %}
     <main class="conteudo">
         <div class="container-novo-apto">
-            <form action="{% url 'salvar-apto' %}" method="post">
+            <form action="{% url 'salva-novo-apto' %}" method="post">
                 {% csrf_token %}
                 <h2>Cadastro apto</h2>
                 <label>Numero</label>
-                <input name="numero_apto" class="form-control-sm" type="number"></br>
+                <input name="numero_apto" class="form-control-sm" type="number"></br></br>
                 <label>Nome do inquilino</label>
-                <input name="morador" class="form-control-sm" type="text">
+                <input name="morador" class="form-control-sm" type="text"></br></br>
+                <label>Valor do aluguel</label>
+                <input name="aluguel" class="form-control-sm" type="text"></br></br>
                 <button class="form-control-sm">Enviar</button>
             </form>
         </div>

@@ -4,15 +4,17 @@
 {% block main %}
     <main class="conteudo">
         <div class="container-novo-apto">
-            <form action="{% url 'abre-apto' %}" method="post">
+            <form action="{% url 'update-apto' %}" method="post">
                 {% csrf_token %}
                 <h2>Edita apto</h2>
                 <label>Id</label>
-                <input name="id_apto" class="form-control-sm" type="number" value="{{ apto.id_apto }}"></br>
+                <input name="id_apto" class="form-control-sm" type="number" value="{{ aptos.id_apto }}"></br>
                 <label>Numero</label>
-                <input name="numero_apto" class="form-control-sm" type="number" value="{{ apto.numero_apto }}"></br>
+                <input name="numero_apto" class="form-control-sm" type="number" value="{{ aptos.numero_apto }}"></br>
                 <label>Nome do inquilino</label>
-                <input name="morador" class="form-control-sm" type="text" value="{{ apto.numero_morador }}">>
+                <input name="morador" class="form-control-sm" type="text" value="{{ aptos.morador }}"></br>
+                <label>Aluguel</label>
+                <input name="aluguel" class="form-control-sm" type="text" value="{{ aptos.aluguel }}"></br></br>
                 <button class="form-control-sm">Enviar</button>
             </form>
         </div>
