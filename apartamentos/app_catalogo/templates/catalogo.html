@@ -9,7 +9,7 @@
         </div>
         <div class="quadro-aptos">
             {% for apto in aptos %}
-                <form class="controles" action="{% url 'edita-apto' %}" method="POST">
+                <form class="controles" action="{% url 'abre-edicao-apto' %}" method="POST">
                     {% csrf_token %}
                     <label>Id</label>
                     <input name="id_apto" class="form-control-sm" type="number" value="{{ apto.id_apto }}" enabled="false"></br>

@@ -55,7 +55,7 @@ def editaApto2(request):
 
     return redirect('catalogo-aptos')
 
-def editaApto(request):
+def abreEdicaoApto(request):
 
     if request.method == 'GET':
         id_apto = request.GET.get(id_apto)
