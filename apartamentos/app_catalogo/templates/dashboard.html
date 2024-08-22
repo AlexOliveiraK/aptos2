@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block main %}
+    <main class="conteudo">
+        <div class="header">
+            <span class="header">Dashboard</span>
+        </div>
+        <div class="dashboard">
+            <div class="total_aptos"> {{ qtd_aptos }} </div>
+            <div class="valor_total"> {{ valor_total }} </div>
+        </div>
+    </main>
+{% endblock %}
